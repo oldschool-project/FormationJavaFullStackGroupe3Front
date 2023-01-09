@@ -1,0 +1,43 @@
+<header class="fixed-top">
+  <!-- projeter une instance de app header -->
+  <ng-content select=".tr-header"></ng-content>
+  <span (click)="toggle()">
+    <!-- ngif -->
+    <!-- <ng-content *ngIf="close" select=".tr-open"></ng-content>
+    <ng-content *ngIf="!close" select=".tr-close"></ng-content> -->
+
+    <!-- ngif else -->
+    <!-- <ng-content *ngIf="close else elseBlock " select=".tr-open"></ng-content>
+    <ng-template #elseBlock>
+      <ng-content select=".tr-close"></ng-content>
+    </ng-template> -->
+
+    <!-- ngif then else -->
+    <ng-container *ngIf="close then thenBlock else elseBlock"></ng-container>
+    <ng-template #thenBlock>
+      <ng-content select=".tr-open"></ng-content>
+    </ng-template>
+    <ng-template #elseBlock>
+      <ng-content select=".tr-close"></ng-content>
+    </ng-template>
+  </span>
+</header>
+<main class="d-flex">
+  <nav [ngClass]="{'close-nav': close}">
+    <!-- transclusion pour le nav -->
+    <ng-content select=".tr-nav"></ng-content>
+  </nav>
+
+  <div class="shadow" *ngIf="!close" (click)="toggle()"></div>
+
+  <div class="content  d-flex flex-column flex-grow-1">
+    <div class="post flex-grow-1">
+      <!-- <router-outlet></router-outlet> -->
+      <ng-content select=".tr-content"></ng-content>
+    </div>
+    <div class="form">
+      <!-- transclusion pour le footer -->
+      <ng-content select=".tr-footer"></ng-content>
+    </div>
+  </div>
+</main>

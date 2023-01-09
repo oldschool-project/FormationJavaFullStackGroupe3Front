@@ -1,0 +1,11 @@
+.btn-primary {
+  background: var(--app-primary);
+  border: var(--app-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--app-primary-dark);
+  border: 2px solid var(--app-primary-dark);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}

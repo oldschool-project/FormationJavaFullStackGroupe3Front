@@ -1,0 +1,46 @@
+@import "../../../stylings/layout";
+
+header {
+  height: 80px;
+  background: var(--app-light);
+}
+main {
+  padding-top: 80px;
+  height: 100%;
+}
+nav {
+  width: 200px;
+  position: fixed;
+  height: calc(100vh - 80px);
+  background: var(--app-darklight2);
+  z-index: 1;
+  transition: 500ms;
+}
+.close-nav {
+  width: 0px;
+  overflow: hidden;
+}
+.shadow {
+  position: fixed;
+  width: 100%;
+  top: 80px;
+  left: 0;
+  height: calc(100vh - 80px);
+  background: rgba(0, 0, 0, 0.5);
+}
+.post {
+  overflow: auto;
+}
+.form {
+  height: 100px;
+  background: var(--app-primary);
+}
+
+@media (min-width: $md-breakpoint) {
+  nav {
+    position: inherit;
+  }
+  .shadow {
+    display: none;
+  }
+}
