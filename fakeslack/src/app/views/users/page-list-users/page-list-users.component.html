@@ -1,0 +1,14 @@
+<app-template-full-width title="Utilisateurs" *ngIf="collection$ |async as collection">
+  <app-table-light [headers]="headers">
+    <!-- <pre>{{ collection | json }}</pre> -->
+    <tr *ngFor="let user of collection">
+      <td>
+        <app-icon-edit (click)="goToEdit(user.id)"></app-icon-edit>
+      </td>
+      <td class="user" (click)="goToUser(user.id)">{{ user.name }}</td>
+      <td>{{ user.id }}</td>
+      <td><app-icon-delete (click)="delete(user.id)"></app-icon-delete></td>
+    </tr>
+  </app-table-light>
+  <app-btn label="Add user" route="add"></app-btn>
+</app-template-full-width>

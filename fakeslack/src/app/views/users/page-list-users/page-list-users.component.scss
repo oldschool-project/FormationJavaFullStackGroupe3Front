@@ -1,0 +1,10 @@
+.user{
+  color: inherit;
+  //filter: invert(100%);
+
+}
+.user:hover{
+cursor: pointer;
+color: var(--app-primary);
+filter: invert(0%);
+}
