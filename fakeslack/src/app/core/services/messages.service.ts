@@ -29,7 +29,7 @@ export class MessagesService {
     return this.httpClient.post<Message>(`${this.urlApi}/messages`, message);
   }
   public getItemById(id: number): Observable<Message> {
-    return this.httpClient.get<Message>(`${this.urlApi}/orders/${id}`);
+    return this.httpClient.get<Message>(`${this.urlApi}/messages/${id}`);
   }
 
   public update(message: Message): Observable<Message> {
