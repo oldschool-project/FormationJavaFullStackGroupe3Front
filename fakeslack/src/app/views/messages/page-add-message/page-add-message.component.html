@@ -1,0 +1,23 @@
+<app-template-container title="Ajouter un message">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="chanelId">Canal</label>
+      <input type="text" class="form-control" id="chanelId" formControlName="chanelId">
+    </div>
+    <div class="form-group">
+      <label for="userId">Utilisateur</label>
+      <input type="text" class="form-control" id="userId" formControlName="userId">
+    </div>
+    <div class="form-group">
+      <label for="text">Message</label>
+      <textarea type="text" class="form-control" id="text" formControlName="text"
+        placeholder="Exprimez-vous..."></textarea>
+    </div>
+    <div class="form-group">
+      <label for="datetime-local">Date</label>
+      <input type="datetime-local" class="form-control" id="date" formControlName="date">
+    </div>
+    <br />
+    <app-btn type="submit" label="Submit"></app-btn>
+  </form>
+</app-template-container>

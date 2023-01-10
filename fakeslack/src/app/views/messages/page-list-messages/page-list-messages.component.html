@@ -1,0 +1,16 @@
+<app-template-full-width title="Messages" *ngIf="collection$ |async as collection">
+  <app-table-light [headers]="this.headers">
+    <tr *ngFor="let message of collection">
+      <td>
+        <app-icon-edit (click)="goToEdit(message.id)"></app-icon-edit><br />
+        <app-icon-delete (click)="deleteMessage(message.id)"></app-icon-delete>
+      </td>
+      <td>{{message.id}}</td>
+      <td>{{message.chanelId}}</td>
+      <td>{{message.userId}}</td>
+      <td>{{message.text}}</td>
+      <td>{{message.date}}</td>
+    </tr>
+  </app-table-light>
+  <app-btn label="Add user" route="add"></app-btn>
+</app-template-full-width>
