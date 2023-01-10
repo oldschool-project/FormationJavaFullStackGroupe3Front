@@ -1,0 +1,63 @@
+{
+  "chanels": [
+    {
+      "id": 1,
+      "name": "main"
+    },
+    {
+      "id": 2,
+      "name": "secondary"
+    },
+    {
+      "id": 3,
+      "name": "random"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "john"
+    },
+    {
+      "id": 2,
+      "name": "jane"
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "text": "This a text for my message",
+      "chanelId": 1,
+      "userId": 1,
+      "datetime": "2023-01-08T14:00:00+0000"
+    },
+    {
+      "id": 2,
+      "text": "Another message",
+      "chanelId": 1,
+      "userId": 2,
+      "date": "2023-01-08T14:05:00+0000"
+    },
+    {
+      "id": 3,
+      "chanelId": 1,
+      "userId": 1,
+      "text": "lala",
+      "date": "2023-01-10T12:00"
+    }
+  ],
+  "user_chanel": [
+    {
+      "user": 1,
+      "chanel": 1
+    },
+    {
+      "user": 1,
+      "chanel": 2
+    },
+    {
+      "user": 2,
+      "chanel": 2
+    }
+  ]
+}
