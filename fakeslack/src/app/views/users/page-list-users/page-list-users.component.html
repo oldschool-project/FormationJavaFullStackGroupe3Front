@@ -5,7 +5,7 @@
       <td>
         <app-icon-edit (click)="goToEdit(user.id)"></app-icon-edit>
       </td>
-      <td class="user" (click)="goToUser(user.id)">{{ user.name }}</td>
+      <td class="user" (click)="goToUser(user.id)">{{ user.username }}</td>
       <td>{{ user.id }}</td>
       <td><app-icon-delete (click)="delete(user.id)"></app-icon-delete></td>
     </tr>

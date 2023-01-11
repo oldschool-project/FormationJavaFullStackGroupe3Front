@@ -14,16 +14,6 @@ const routes: Routes = [
       import('./views/users/users.module').then((m) => m.UsersModule),
   },
   {
-    path: 'messages',
-    loadChildren: () =>
-      import('./views/messages/messages.module').then((m) => m.MessagesModule),
-  },
-  {
-    path: 'channels',
-    loadChildren: () =>
-      import('./views/channels/channels.module').then((m) => m.ChannelsModule),
-  },
-  {
     path: '**',
     loadChildren: () =>
       import('./views/not-found/not-found.module').then(
