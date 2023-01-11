@@ -1,7 +1,8 @@
-export interface IMessage {
+export interface MessageI {
   id: number;
-  userId: number;
-  chanelId: number;
-  text: string;
-  date: Date;
+  content: string;
+  created_at: Date;
+  updated_at: Date;
+  channel_id: number;
+  user_id: number;
 }
