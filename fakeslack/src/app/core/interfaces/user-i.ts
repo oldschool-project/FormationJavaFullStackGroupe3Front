@@ -1,4 +1,10 @@
-export interface IUser {
+import { UserRole } from '../enums/user-role';
+
+export interface UserI {
   id: number;
-  name: string;
+  email: string;
+  password: string;
+  username: string;
+  isLogged: boolean;
+  role: UserRole;
 }
