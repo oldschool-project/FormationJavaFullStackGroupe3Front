@@ -1,4 +1,4 @@
-export interface IUser {
+export interface IChanel {
   id: number;
   name: string;
 }
