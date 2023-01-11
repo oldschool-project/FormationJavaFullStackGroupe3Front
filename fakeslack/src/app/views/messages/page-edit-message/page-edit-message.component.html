@@ -1,5 +1,5 @@
 <app-template-container title="Editer un message">
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="items$ |async">
     <div class="form-group">
       <label for="chanelId">Canal</label>
       <input type="text" class="form-control" id="chanelId" formControlName="chanelId">
